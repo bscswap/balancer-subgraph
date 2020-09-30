@@ -22,13 +22,13 @@ export let ZERO_BD = BigDecimal.fromString('0')
 
 let network = dataSource.network()
 
-export let WETH: string = (network == 'mainnet')
-  ? '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
-  : '0xd0a1e359811322d97991e03f863a0c30c2cf029c'
+export let WETH: string = (network == 'bscmainnet')
+  ? '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
+  : '0xae13d989dac2f0debff460ac112a837c89baa7cd'
 
-export let USD: string = (network == 'mainnet')
-  ? '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48' // USDC
-  : '0x1528f3fcc26d13f7079325fb78d9442607781c8c' // DAI
+export let USD: string = (network == 'bscmainnet')
+  ? '0xe9e7cea3dedca5984780bafc599bd69add087d56' // BUSD
+  : '0x337610d27c682e347c9cd60bd4b3b107c9d34ddd' // USDT
 
 export function hexToDecimal(hexString: String, decimals: i32): BigDecimal {
   let bytes = Bytes.fromHexString(hexString).reverse() as Bytes
